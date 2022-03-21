@@ -8,20 +8,11 @@ def decode_ctype(x):
 
 mydll = ctypes.CDLL('./Make_DLL/x64/Release/Make_DLL.dll')
 
-# my_id = "ckh2445"
-# c_id = ctypes.c_char_p(my_id.encode('utf-8'))
-
-# print(c_id)
-# result = mydll.Login(my_id)
-
-# print(result)
-# result = ctypes.c_char_p(result.encode('utf-8'))
-
-# print(result)
-
-
 my_str = convert_ctype('hello world')
+# print(type(my_str))
+# print(my_str)
 result = mydll.strTest(my_str)
+print('\n' + str(result))
 result = decode_ctype(result)
 
 print(result) # hello world

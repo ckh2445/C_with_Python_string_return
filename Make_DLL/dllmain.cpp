@@ -9,6 +9,8 @@
 #define EXPORT extern "C" __declspec(dllexport)
 
 EXPORT int plus(int nA, int nB);
+EXPORT char* Login(char* nID);
+EXPORT char* strTest(char* nStr1);
 
 //BOOL APIENTRY DllMain(HANDLE hModule,
 //	DWORD ul_reason_for_call,
@@ -26,21 +28,20 @@ EXPORT char* Login(char* id)
 {
 	char* my_id = (char*) malloc(sizeof(char) * (strlen(id)));
 
-	strcpy_s(my_id, sizeof(char) * (strlen(id)),id);
-	
+	strcpy(my_id,id);
 	//char* my_pw = (char*) malloc(sizeof(char) * (strlen(pw)));
 	//strcpy_s(my_pw, sizeof(char) * (strlen(id)), pw);
 	
-	/*char my_id[20];
-
-	strcpy_s(my_id, 20, id);*/
-
 	return my_id;
 }
 
 EXPORT char* strTest(char* str1) {
+	printf(str1);
 	char* new_str = (char*)malloc(sizeof(char) * (strlen(str1)));
-	strcpy_s(new_str, sizeof(char) * (strlen(str1)),str1);
+	printf("\n");
+	
+	strcpy(new_str,str1);
+	printf(new_str);
 
 	return new_str;
 }
