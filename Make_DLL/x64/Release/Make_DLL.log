@@ -1,8 +1,9 @@
 ﻿  dllmain.cpp
-     C:\Users\ckh\Desktop\종합\pyyolo_git\C_with_Python_string_return\Make_DLL\x64\Release\Make_DLL.lib 라이브러리 및 C:\Users\ckh\Desktop\종합\pyyolo_git\C_with_Python_string_return\Make_DLL\x64\Release\Make_DLL.exp 개체를 생성하고 있습니다.
-  코드를 생성하고 있습니다.
-  1 of 6 functions (16.7%) were compiled, the rest were copied from previous compilation.
-    0 functions were new in current compilation
-    0 functions had inline decision re-evaluated but remain unchanged
-  코드를 생성했습니다.
-  Make_DLL.vcxproj -> C:\Users\ckh\Desktop\종합\pyyolo_git\C_with_Python_string_return\Make_DLL\x64\Release\Make_DLL.dll
+C:\Users\ckh\Desktop\종합\pyyolo_git\C_with_Python_string_return\Make_DLL\dllmain.cpp(34,17): error C2664: 'char *strcpy(char *,const char *)': 인수 1을(를) 'const char [20]'에서 'char *'(으)로 변환할 수 없습니다.
+C:\Users\ckh\Desktop\종합\pyyolo_git\C_with_Python_string_return\Make_DLL\dllmain.cpp(34,9): message : 변환하면서 한정자가 손실됩니다.
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\string.h(130,1): message : 'strcpy' 선언을 참조하십시오.
+C:\Users\ckh\Desktop\종합\pyyolo_git\C_with_Python_string_return\Make_DLL\dllmain.cpp(35,18): error C2664: 'char *strcpy(char *,const char *)': 인수 1을(를) 'const char [20]'에서 'char *'(으)로 변환할 수 없습니다.
+C:\Users\ckh\Desktop\종합\pyyolo_git\C_with_Python_string_return\Make_DLL\dllmain.cpp(35,9): message : 변환하면서 한정자가 손실됩니다.
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt\string.h(130,1): message : 'strcpy' 선언을 참조하십시오.
+C:\Users\ckh\Desktop\종합\pyyolo_git\C_with_Python_string_return\Make_DLL\dllmain.cpp(41,14): error C2440: 'return': 'const char [20]'에서 'char *'(으)로 변환할 수 없습니다.
+C:\Users\ckh\Desktop\종합\pyyolo_git\C_with_Python_string_return\Make_DLL\dllmain.cpp(41,9): message : 변환하면서 한정자가 손실됩니다.
