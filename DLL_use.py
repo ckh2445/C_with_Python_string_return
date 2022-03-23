@@ -8,10 +8,20 @@ def decode_ctype(x):
 
 mydll = ctypes.CDLL('./Make_DLL/x64/Release/Make_DLL.dll')
 
+# add 함수
+a = 10
+b = 20
+
+add_result = mydll.plus(a,b)
+print(add_result)
+
+# Login 함수
 my_id = "test_id".encode('utf-8')
 my_pw = "test_pw".encode('utf-8')
 
 result = mydll.Login(my_id,my_pw)
 
+print('\n' + "test1" + " " +  str(result))
 result = decode_ctype(result)
-print('\n' + "test"+ '\n' +str(result))
+
+print('\n' + "test2"+ '\n' +str(result))
