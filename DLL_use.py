@@ -1,27 +1,16 @@
 import ctypes
 
-def convert_ctype(x):
-    return x.encode('utf-8')
+mydll = ctypes.WinDLL('./Make_DLL/x64/Release/Make_DLL.dll')
 
-def decode_ctype(x):
-    return str(ctypes.c_char_p(x).value.decode('utf-8'))
+Login_func = mydll['Login']
+Login_func.argtypes = (ctypes.c_char_p, ctypes.c_char_p)
+Login_func.restype = ctypes.c_char_p
 
-mydll = ctypes.CDLL('./Make_DLL/x64/Release/Make_DLL.dll')
+id = "ckh2445".encode('utf-8')
+pw = "ckh".encode('utf-8')
 
-# add 함수
-a = 10
-b = 20
+Login_res = str(Login_func(id, pw))
+Login_res = Login_res.strip('b')
+Login_res = Login_res.strip("'")
 
-add_result = mydll.plus(a,b)
-print(add_result)
-
-# Login 함수
-my_id = "test_id".encode('utf-8')
-my_pw = "test_pw".encode('utf-8')
-
-result = mydll.Login(my_id,my_pw)
-
-print('\n' + "test1" + " " +  str(result))
-result = decode_ctype(result)
-
-print('\n' + "test2"+ '\n' +str(result))
+print(Login_res)

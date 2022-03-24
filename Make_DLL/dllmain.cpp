@@ -12,12 +12,12 @@ EXPORT int plus(int nA, int nB);
 EXPORT char* Login(char* id, char* pw);
 EXPORT char* strTest(char* nStr1);
 
-//BOOL APIENTRY DllMain(HANDLE hModule,
-//	DWORD ul_reason_for_call,
-//	LPVOID lpReserved)
-//{
-//	return TRUE;
-//}
+BOOL APIENTRY DllMain(HANDLE hModule,
+	DWORD ul_reason_for_call,
+	LPVOID lpReserved)
+{
+	return TRUE;
+}
 
 EXPORT int plus(int a, int b)
 {
@@ -32,10 +32,6 @@ EXPORT char* Login(char* id,char* pw)
 	strcpy(my_id,id);
 	strcpy(my_pw, pw);
 
-	printf(my_id);
-	printf("\n");
-	printf(my_pw);
-
 	return my_id;
 }
 
@@ -49,3 +45,4 @@ EXPORT char* strTest(char* str1) {
 
 	return new_str;
 }
+
